@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+   <children>
+      <ImageView fx:id="playerImage" fitHeight="79.0" fitWidth="53.0" layoutX="189.0" layoutY="219.0" nodeOrientation="RIGHT_TO_LEFT" onMouseDragged="#mouseDragged" onMousePressed="#buttonPress" onMouseReleased="#buttonReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/egg1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="217.0" layoutY="33.0" mnemonicParsing="false" onAction="#resetButton" text="Restart" />
+      <ImageView fx:id="bowImage" fitHeight="96.0" fitWidth="81.0" layoutX="194.0" layoutY="360.0" onMouseDragged="#mouseDragged" onMousePressed="#buttonPress" onMouseReleased="#buttonReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/bow1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="targetImage" fitHeight="150.0" fitWidth="200.0" layoutX="501.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/baloon1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bombImage" fitHeight="150.0" fitWidth="200.0" layoutX="322.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/bomb1.png" />
+         </image>
+      </ImageView>
+      <ImageView id="arrowImage" fx:id="arrowImage" cache="true" fitHeight="38.0" fitWidth="77.0" layoutX="107.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" rotate="162.5">
+         <image>
+            <Image url="@resources/arrow1.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="ground" arcHeight="5.0" arcWidth="5.0" height="79.0" layoutY="561.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ToggleButton fx:id="playerButton" layoutX="30.0" layoutY="104.0" mnemonicParsing="false" onAction="#toggleThrow" selected="true" text="Throw">
+         <toggleGroup>
+            <ToggleGroup fx:id="weaponSelect" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="bowButton" layoutX="85.0" layoutY="104.0" mnemonicParsing="false" onAction="#toggleBow" text="Bow" toggleGroup="$weaponSelect" />
+      <ImageView fx:id="redArrowImage" fitHeight="26.0" fitWidth="158.0" layoutX="285.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@resources/redarrow1.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="1000.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="171.0" layoutX="409.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="384.0" layoutX="551.0" layoutY="178.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="171.0" layoutX="750.0" layoutY="391.0" stroke="BLACK" strokeType="INSIDE" width="143.0" />
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="80.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label fx:id="textField" layoutX="41.0" layoutY="31.0" prefHeight="17.0" prefWidth="163.0" text="Shoot the balloons">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="highscoreLabel" layoutX="41.0" layoutY="67.0" text="Highscore: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
